@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+//FOR FIXED NUMBER OF MATCHES ONLY
+
 public class  MatchingManager : MonoBehaviour {
     //Inherit this
     //not used in colorsMixed

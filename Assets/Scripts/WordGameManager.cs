@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
+//missing letter GAME
+
 public class WordGameManager : MonoBehaviour {
 	public static WordGameManager ins;
-	public List<string> wordList;
 
+	public List<string> wordList;
 	//inventory canvas
 	public GameObject groupClue, groupLetters;
 	public GameObject slot, itemLetter;
@@ -25,6 +27,8 @@ public class WordGameManager : MonoBehaviour {
 	string strClue;  //clue
 	string word;
 	int index=0, rnd=0;
+
+    public string Word { get { return word; } }
 
 	void ExtractWord()
 	{
@@ -74,7 +78,7 @@ public class WordGameManager : MonoBehaviour {
 	void SpawnLetterTo(Transform parent, List<GameObject> lstInventory, List<GameObject> pool)
 	{
 		GameObject o = null;
-		Text txt = null;
+		
 		/*
 		bool f=false;
 		for(int i=0; i<lstInventory.Count; i++)
@@ -99,7 +103,6 @@ public class WordGameManager : MonoBehaviour {
 		o.transform.SetLocalYPos(0);
         o.transform.SetLocalWidth(1);
         o.transform.SetLocalHeight(1);
-        txt = o.transform.GetChild(0).GetComponent<Text>();
 		lstInventory.Add(o);
 		pool.Add(o);
        

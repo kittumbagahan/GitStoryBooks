@@ -8,6 +8,7 @@ public class Item : MonoBehaviour {
     Transform origin;
 
 	bool dragging=false; //for local dragging
+    [SerializeField]
 	bool locked; //use along with WorldGameManager if item is under clue
 
 	public delegate void DelDrop();

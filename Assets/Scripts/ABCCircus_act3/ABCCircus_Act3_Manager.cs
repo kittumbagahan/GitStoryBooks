@@ -107,22 +107,22 @@ public class ABCCircus_Act3_Manager : MonoBehaviour {
     IEnumerator IECorrect(Text txt)
     {
         print("Correct!");
-        //txt.color = clr[0];
+        txt.color = clr[0];
         yield return new WaitForSeconds(1f);
         index++;
         ListOptions();
         recentBtnClicked.interactable = true;
-       // txt.color = Color.white;
+        txt.color = clr[2];
     }
 
     IEnumerator IEWrong(Text txt)
     {
   
         print("WRONG");
-       // txt.color = clr[1];
+        txt.color = clr[1];
         yield return new WaitForSeconds(0.5f);
         recentBtnClicked.interactable = true;
-      //  txt.color = Color.white;
+        txt.color = clr[2];
     }
 
     void CheckAnswer(Text txtChosen)
