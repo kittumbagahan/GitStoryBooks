@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -13,6 +14,8 @@ public class Shape : MonoBehaviour {
 
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -26,4 +29,7 @@ public class Shape : MonoBehaviour {
     public EShapes eShape;
 
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

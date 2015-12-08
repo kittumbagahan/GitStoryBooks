@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿/*
  * File:			GAFObjectEditor.cs
  * Version:			2.0
@@ -23,6 +24,8 @@ namespace GAFEditor.Objects
 	{
 	}
 =======
+=======
+>>>>>>> master
 ﻿/*
  * File:			GAFObjectEditor.cs
  * Version:			2.0
@@ -46,5 +49,8 @@ namespace GAFEditor.Objects
 	public class GAFObjectEditor : GAFObjectInternalEditor
 	{
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

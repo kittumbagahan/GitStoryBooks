@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			gafmovieclipinternaleditor.cs
  * Version:			2.0
@@ -508,6 +509,8 @@ namespace GAFEditorInternal.Core
 		#endregion // Implementation
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			gafmovieclipinternaleditor.cs
  * Version:			2.0
@@ -1016,5 +1019,8 @@ namespace GAFEditorInternal.Core
 
 		#endregion // Implementation
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

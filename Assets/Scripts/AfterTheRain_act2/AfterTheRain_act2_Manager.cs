@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -59,6 +60,8 @@ public class AfterTheRain_act2_Manager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -118,4 +121,7 @@ public class AfterTheRain_act2_Manager : MonoBehaviour {
         }
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

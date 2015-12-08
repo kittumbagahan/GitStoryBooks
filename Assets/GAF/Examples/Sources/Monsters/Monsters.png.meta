@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 20cf1c618c3c3c14b98fb3cda0e230e0
 timeCreated: 1433750302
@@ -55,6 +56,8 @@ TextureImporter:
   assetBundleName: 
   assetBundleVariant: 
 =======
+=======
+>>>>>>> master
 fileFormatVersion: 2
 guid: 20cf1c618c3c3c14b98fb3cda0e230e0
 timeCreated: 1433750302
@@ -110,4 +113,7 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

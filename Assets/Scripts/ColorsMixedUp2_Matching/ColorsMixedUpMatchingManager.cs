@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -30,6 +31,8 @@ public class ColorsMixedUpMatchingManager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -60,4 +63,7 @@ public class ColorsMixedUpMatchingManager : MonoBehaviour {
         print("Game over");
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿/*
  * File:			GAFObject.cs
  * Version:			2.0
@@ -171,6 +172,8 @@ namespace GAF.Objects
 		#endregion /////// PROPERTIES ////////
 	}
 =======
+=======
+>>>>>>> master
 ﻿/*
  * File:			GAFObject.cs
  * Version:			2.0
@@ -342,5 +345,8 @@ namespace GAF.Objects
 
 		#endregion /////// PROPERTIES ////////
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

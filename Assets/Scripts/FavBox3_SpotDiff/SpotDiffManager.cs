@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -67,6 +68,8 @@ public class SpotDiffManager : MonoBehaviour {
     
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -134,4 +137,7 @@ public class SpotDiffManager : MonoBehaviour {
 
     
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Shader "GAF/GAFMaskReset"
 {
 	Properties
@@ -41,6 +42,8 @@
 	}
 }
 =======
+=======
+>>>>>>> master
 ﻿Shader "GAF/GAFMaskReset"
 {
 	Properties
@@ -82,4 +85,7 @@
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

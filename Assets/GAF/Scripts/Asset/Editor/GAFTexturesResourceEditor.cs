@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFTexturesResourceEditor.cs
  * Version:			2.0
@@ -22,6 +23,8 @@ namespace GAFEditor.Assets
 	{
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFTexturesResourceEditor.cs
  * Version:			2.0
@@ -44,5 +47,8 @@ namespace GAFEditor.Assets
 	public class GAFTexturesResourceEditor : GAFTexturesResourceInternalEditor
 	{
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -19,6 +20,8 @@ public class GAFSceneController : MonoBehaviour
 	}
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -38,4 +41,7 @@ public class GAFSceneController : MonoBehaviour
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

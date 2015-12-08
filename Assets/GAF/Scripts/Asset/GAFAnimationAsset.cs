@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFAnimationAsset.cs
  * Version:			2.0
@@ -307,6 +308,8 @@ namespace GAF.Assets
 	}
 }
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFAnimationAsset.cs
  * Version:			2.0
@@ -614,4 +617,7 @@ namespace GAF.Assets
 		#endregion ////// PROPERTIES /////
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

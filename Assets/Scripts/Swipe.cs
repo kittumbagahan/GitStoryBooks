@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
@@ -68,6 +69,8 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 	#endregion
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
@@ -136,4 +139,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
 	#endregion
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

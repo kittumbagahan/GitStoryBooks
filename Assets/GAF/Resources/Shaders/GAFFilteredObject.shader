@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Shader "GAF/GAFFilteredObject" 
 {
 	Properties
@@ -51,6 +52,8 @@ Shader "GAF/GAFFilteredObject"
 	}
 }
 =======
+=======
+>>>>>>> master
 Shader "GAF/GAFFilteredObject" 
 {
 	Properties
@@ -102,4 +105,7 @@ Shader "GAF/GAFFilteredObject"
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFAnimationAssetEditor.cs
  * Version:			2.0
@@ -48,6 +49,8 @@ namespace GAFEditor.Assets
 		#endregion // Implementation
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFAnimationAssetEditor.cs
  * Version:			2.0
@@ -96,5 +99,8 @@ namespace GAFEditor.Assets
 		}
 		#endregion // Implementation
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System;
 using UnityEngine.UI;
 
+=======
+using System;
+using UnityEngine.UI;
+
+>>>>>>> master
 =======
 using System;
 using UnityEngine.UI;
@@ -28,6 +34,7 @@ public class Collision : MonoBehaviour {
 	void Update () {
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}    
    
     void OnMouseDown()
@@ -56,6 +63,8 @@ public class Collision : MonoBehaviour {
         }                   
     }
 =======
+=======
+>>>>>>> master
 	}    
    
     void OnMouseDown()
@@ -83,6 +92,9 @@ public class Collision : MonoBehaviour {
             GreyLayer.color = Colors.instance.SelectedColorValue();
         }                   
     }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 	void OnMouseUp()
@@ -97,16 +109,22 @@ public class Collision : MonoBehaviour {
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     //public Colors.COLORS MyColor
     //{
     //    get { return Color; }
     //}
 =======
+=======
+>>>>>>> master
 
     //public Colors.COLORS MyColor
     //{
     //    get { return Color; }
     //}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

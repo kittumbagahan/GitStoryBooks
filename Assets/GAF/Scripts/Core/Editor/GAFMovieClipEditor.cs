@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFMovieClipEditor.cs
  * Version:			2.0
@@ -25,6 +26,8 @@ namespace GAFEditor.Core
 	{
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFMovieClipEditor.cs
  * Version:			2.0
@@ -50,5 +53,8 @@ namespace GAFEditor.Core
 	public class GAFMovieClipEditor : GAFMovieClipInternalEditor<GAFObjectsManager, GAFTexturesResource>
 	{
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

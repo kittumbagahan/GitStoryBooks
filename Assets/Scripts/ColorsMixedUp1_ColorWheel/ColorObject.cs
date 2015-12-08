@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -38,6 +39,8 @@ public class ColorObject : MonoBehaviour {
   
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -76,4 +79,7 @@ public class ColorObject : MonoBehaviour {
     }
   
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

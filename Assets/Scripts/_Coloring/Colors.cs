@@ -18,17 +18,23 @@ public class Colors : MonoBehaviour {
 
 //	[SerializeField]
 <<<<<<< HEAD
+<<<<<<< HEAD
 //	Text text;
 
 	string aspect;
     // Use this for initialization
     void Start () {
 =======
+=======
+>>>>>>> master
 //	Text text;
 
 	string aspect;
     // Use this for initialization
     void Start () {
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
         instance = this;
 
@@ -54,6 +60,7 @@ public class Colors : MonoBehaviour {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void SelectedColor()
     {
         print(selectedColor.ToString());
@@ -78,6 +85,8 @@ public class Colors : MonoBehaviour {
             case COLORS.GREEN:
                 return new Color32(48, 73, 9, 255);
 =======
+=======
+>>>>>>> master
     public void SelectedColor()
     {
         print(selectedColor.ToString());
@@ -101,6 +110,9 @@ public class Colors : MonoBehaviour {
                 break;
             case COLORS.GREEN:
                 return new Color32(48, 73, 9, 255);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
                 break;
 			case COLORS.YELLOW:
@@ -111,6 +123,7 @@ public class Colors : MonoBehaviour {
 				break;
 			case COLORS.PURPLE:
 				return new Color32(174, 76, 231, 255);
+<<<<<<< HEAD
 <<<<<<< HEAD
 				break;
             default:
@@ -123,6 +136,8 @@ public class Colors : MonoBehaviour {
     public void ClickCheck()
     {
 =======
+=======
+>>>>>>> master
 				break;
             default:
                 return new Color32(255, 255, 255, 255);
@@ -133,6 +148,9 @@ public class Colors : MonoBehaviour {
     int ctr = 0;
     public void ClickCheck()
     {
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
         ctr++;        
 		switch(bookAct)
@@ -152,7 +170,11 @@ public class Colors : MonoBehaviour {
 			}
 			break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		}
+=======
+		}
+>>>>>>> master
 =======
 		}
 >>>>>>> master

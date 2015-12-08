@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef GAF_SHADER_BASE_INCLUDED
 #define GAF_SHADER_BASE_INCLUDED
 
@@ -108,6 +109,8 @@ return resultColor;
 }
 #endif
 =======
+=======
+>>>>>>> master
 #ifndef GAF_SHADER_BASE_INCLUDED
 #define GAF_SHADER_BASE_INCLUDED
 
@@ -216,4 +219,7 @@ if (resultColor.a < 0.01)
 return resultColor;
 }
 #endif
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

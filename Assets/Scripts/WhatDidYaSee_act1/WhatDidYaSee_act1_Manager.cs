@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -52,6 +53,8 @@ public class WhatDidYaSee_act1_Manager : MonoBehaviour {
    
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -104,4 +107,7 @@ public class WhatDidYaSee_act1_Manager : MonoBehaviour {
 
    
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

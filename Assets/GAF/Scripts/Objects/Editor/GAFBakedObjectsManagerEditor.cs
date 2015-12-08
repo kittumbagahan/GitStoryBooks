@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿/*
  * File:			GAFBakedObjectsManagerEditor.cs
  * Version:			2.0
@@ -185,6 +186,8 @@ namespace GAFEditor.Objects
 	}
 }
 =======
+=======
+>>>>>>> master
 ﻿/*
  * File:			GAFBakedObjectsManagerEditor.cs
  * Version:			2.0
@@ -370,4 +373,7 @@ namespace GAFEditor.Objects
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

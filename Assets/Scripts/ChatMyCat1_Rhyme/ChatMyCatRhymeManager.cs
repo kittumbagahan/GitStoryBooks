@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -249,6 +250,8 @@ public class ChatMyCatRhymeManager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -498,4 +501,7 @@ public class ChatMyCatRhymeManager : MonoBehaviour {
         }
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

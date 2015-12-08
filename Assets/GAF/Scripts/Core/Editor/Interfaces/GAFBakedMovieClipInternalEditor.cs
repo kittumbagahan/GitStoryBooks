@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFBakedMovieClipInternalEditor.cs
  * Version:			2.0
@@ -489,6 +490,8 @@ namespace GAFEditorInternal.Core
 	}
 }
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFBakedMovieClipInternalEditor.cs
  * Version:			2.0
@@ -978,4 +981,7 @@ namespace GAFEditorInternal.Core
 		#endregion // Implementation
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

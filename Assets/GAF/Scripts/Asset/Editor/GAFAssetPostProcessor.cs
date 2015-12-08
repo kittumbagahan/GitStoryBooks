@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFAssetPostProcessor.cs
  * Version:			2.0
@@ -101,6 +102,8 @@ namespace GAFEditor.Assets
 		}
     }
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFAssetPostProcessor.cs
  * Version:			2.0
@@ -202,5 +205,8 @@ namespace GAFEditor.Assets
 			}
 		}
     }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

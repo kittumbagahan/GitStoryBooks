@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Shader "GAF/GAFGlow" 
 {
 	Properties 
@@ -39,6 +40,8 @@
 	Fallback Off
 }
 =======
+=======
+>>>>>>> master
 ﻿Shader "GAF/GAFGlow" 
 {
 	Properties 
@@ -78,4 +81,7 @@
 
 	Fallback Off
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

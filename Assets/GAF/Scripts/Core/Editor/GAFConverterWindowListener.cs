@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			gafconverterwindowlistener.cs
  * Version:			2.0
@@ -165,6 +166,8 @@ namespace GAFEditor.Core
 	}
 }
 =======
+=======
+>>>>>>> master
 /*
  * File:			gafconverterwindowlistener.cs
  * Version:			2.0
@@ -330,4 +333,7 @@ namespace GAFEditor.Core
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

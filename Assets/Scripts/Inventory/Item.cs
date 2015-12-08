@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -112,6 +113,8 @@ public class Item : MonoBehaviour {
 
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -223,4 +226,7 @@ public class Item : MonoBehaviour {
     }
 
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

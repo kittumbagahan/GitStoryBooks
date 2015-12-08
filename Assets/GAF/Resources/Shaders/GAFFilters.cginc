@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef GAF_FILTERS_INCLUDED
 #define GAF_FILTERS_INCLUDED
 
@@ -115,6 +116,8 @@ fixed4 gaf_glow_frag(gaf_v2f_blur input) : SV_Target
 
 #endif
 =======
+=======
+>>>>>>> master
 #ifndef GAF_FILTERS_INCLUDED
 #define GAF_FILTERS_INCLUDED
 
@@ -230,4 +233,7 @@ fixed4 gaf_glow_frag(gaf_v2f_blur input) : SV_Target
 }
 
 #endif
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

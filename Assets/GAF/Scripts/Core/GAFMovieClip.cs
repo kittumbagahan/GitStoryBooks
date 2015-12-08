@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFMovieClip.cs
  * Version:			2.0
@@ -535,6 +536,8 @@ namespace GAF.Core
 		#endregion /////// PROPERTIES ////////
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFMovieClip.cs
  * Version:			2.0
@@ -1070,5 +1073,8 @@ namespace GAF.Core
 
 		#endregion /////// PROPERTIES ////////
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

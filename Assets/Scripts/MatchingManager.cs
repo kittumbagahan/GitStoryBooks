@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -132,6 +133,8 @@ public class  MatchingManager : MonoBehaviour {
    
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -262,4 +265,7 @@ public class  MatchingManager : MonoBehaviour {
 
    
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

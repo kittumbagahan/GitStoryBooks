@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -289,6 +290,8 @@ public class ABCCircus_Act3_Manager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -578,4 +581,7 @@ public class ABCCircus_Act3_Manager : MonoBehaviour {
         }
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

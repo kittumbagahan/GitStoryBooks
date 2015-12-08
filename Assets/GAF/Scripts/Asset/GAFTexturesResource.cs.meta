@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 59f0b625614a406468ee087f147489e7
 MonoImporter:
@@ -8,6 +9,8 @@ MonoImporter:
   icon: {instanceID: 0}
   userData: 
 =======
+=======
+>>>>>>> master
 fileFormatVersion: 2
 guid: 59f0b625614a406468ee087f147489e7
 MonoImporter:
@@ -16,4 +19,7 @@ MonoImporter:
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

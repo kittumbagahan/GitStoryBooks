@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -134,6 +135,8 @@ public class SceneSpawner : MonoBehaviour {
    
 }
 =======
+=======
+>>>>>>> master
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -268,4 +271,7 @@ public class SceneSpawner : MonoBehaviour {
     
    
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

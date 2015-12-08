@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFBakedObjectsManager.cs
  * Version:			2.0
@@ -151,6 +152,8 @@ namespace GAF.Objects
 		#endregion ///////// PROPERTIES ///////////
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFBakedObjectsManager.cs
  * Version:			2.0
@@ -302,5 +305,8 @@ namespace GAF.Objects
 
 		#endregion ///////// PROPERTIES ///////////
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

@@ -37,9 +37,15 @@ public class ColorButton : MonoBehaviour {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Colors.COLORS ButtonColor
     {
         get { return myColor; }
+=======
+    public Colors.COLORS ButtonColor
+    {
+        get { return myColor; }
+>>>>>>> master
 =======
     public Colors.COLORS ButtonColor
     {

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ***********************************************************************
 // Assembly         : GAF
 // Author           : Niktin.Nikolay
@@ -326,6 +327,8 @@ namespace GAFInternal.Objects
 	}
 }
 =======
+=======
+>>>>>>> master
 // ***********************************************************************
 // Assembly         : GAF
 // Author           : Niktin.Nikolay
@@ -652,4 +655,7 @@ namespace GAFInternal.Objects
 		#endregion // Implementation
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

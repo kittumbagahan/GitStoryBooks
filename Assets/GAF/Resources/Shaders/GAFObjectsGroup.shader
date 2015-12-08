@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Shader "GAF/GAFObjectsGroup" 
 {
 	Properties 
@@ -48,6 +49,8 @@ Shader "GAF/GAFObjectsGroup"
 	}
 }
 =======
+=======
+>>>>>>> master
 Shader "GAF/GAFObjectsGroup" 
 {
 	Properties 
@@ -96,4 +99,7 @@ Shader "GAF/GAFObjectsGroup"
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

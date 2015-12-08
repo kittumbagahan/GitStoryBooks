@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -115,6 +116,8 @@ public static class MonoExtension{
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -230,4 +233,7 @@ public static class MonoExtension{
         t.localScale = new Vector3(t.localScale.x, height, t.localScale.z);
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

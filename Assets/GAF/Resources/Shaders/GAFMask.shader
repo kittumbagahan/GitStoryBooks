@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Shader "GAF/GAFMask"
 {
 	Properties
@@ -41,6 +42,8 @@ Shader "GAF/GAFMask"
 	}
 }
 =======
+=======
+>>>>>>> master
 Shader "GAF/GAFMask"
 {
 	Properties
@@ -82,4 +85,7 @@ Shader "GAF/GAFMask"
 		}
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

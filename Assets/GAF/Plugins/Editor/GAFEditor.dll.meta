@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 7c50cb4cd0755234f9403e54a4fe2c71
 timeCreated: 1438353184
@@ -20,6 +21,8 @@ PluginImporter:
   assetBundleName: 
   assetBundleVariant: 
 =======
+=======
+>>>>>>> master
 fileFormatVersion: 2
 guid: 7c50cb4cd0755234f9403e54a4fe2c71
 timeCreated: 1438353184
@@ -40,4 +43,7 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

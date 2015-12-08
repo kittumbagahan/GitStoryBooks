@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -55,6 +56,8 @@ public class YummyShapes_act3_Manager : MatchingManager {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -110,4 +113,7 @@ public class YummyShapes_act3_Manager : MatchingManager {
         ShuffleItems();
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

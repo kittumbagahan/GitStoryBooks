@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -116,6 +117,8 @@ public class YummyShapes_act2_Manager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -232,4 +235,7 @@ public class YummyShapes_act2_Manager : MonoBehaviour {
         GameOn();
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

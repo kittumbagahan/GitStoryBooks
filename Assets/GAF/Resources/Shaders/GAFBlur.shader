@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Shader "GAF/GAFBlur" 
 {
 	Properties 
@@ -38,6 +39,8 @@ Shader "GAF/GAFBlur"
 	Fallback Off
 }
 =======
+=======
+>>>>>>> master
 Shader "GAF/GAFBlur" 
 {
 	Properties 
@@ -76,4 +79,7 @@ Shader "GAF/GAFBlur"
 
 	Fallback Off
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

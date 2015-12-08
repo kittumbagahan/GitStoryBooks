@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -49,6 +50,8 @@ public class Slot : MonoBehaviour {
    
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -98,4 +101,7 @@ public class Slot : MonoBehaviour {
 
    
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

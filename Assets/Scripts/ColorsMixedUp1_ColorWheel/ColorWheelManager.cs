@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -64,6 +65,8 @@ public class ColorWheelManager : MonoBehaviour {
    
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -128,4 +131,7 @@ public class ColorWheelManager : MonoBehaviour {
 
    
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

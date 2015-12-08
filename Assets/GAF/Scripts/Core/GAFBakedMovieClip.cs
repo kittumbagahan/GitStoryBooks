@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFBakedMovieClip.cs
  * Version:			2.0
@@ -540,6 +541,8 @@ namespace GAF.Core
 	}
 }
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFBakedMovieClip.cs
  * Version:			2.0
@@ -1080,4 +1083,7 @@ namespace GAF.Core
 		#endregion /////// PROPERTIES ////////
 	}
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

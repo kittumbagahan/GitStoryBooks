@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * File:			GAFTexturesResource.cs
  * Version:			2.0
@@ -150,6 +151,8 @@ namespace GAF.Assets
 		#endregion
 	}
 =======
+=======
+>>>>>>> master
 /*
  * File:			GAFTexturesResource.cs
  * Version:			2.0
@@ -300,5 +303,8 @@ namespace GAF.Assets
 
 		#endregion
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

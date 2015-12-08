@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -205,6 +206,8 @@ public class InventoryManager : MonoBehaviour {
     }
 }
 =======
+=======
+>>>>>>> master
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -410,4 +413,7 @@ public class InventoryManager : MonoBehaviour {
         }
     }
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

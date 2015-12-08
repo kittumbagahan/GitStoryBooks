@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 6e19066c5ab98db4ebd72d310ca06702
 timeCreated: 1439274426
@@ -8,6 +9,8 @@ NativeFormatImporter:
   assetBundleName: 
   assetBundleVariant: 
 =======
+=======
+>>>>>>> master
 fileFormatVersion: 2
 guid: 6e19066c5ab98db4ebd72d310ca06702
 timeCreated: 1439274426
@@ -16,4 +19,7 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
