@@ -11,10 +11,17 @@ public class ColorButtonClick : MonoBehaviour, IPointerClickHandler {
 		{
 			ColorButton.activeButton = this.transform.parent;
 			ColorButton.activeButton.GetComponent<ColorButton>().myAnimator.enabled = true;
+<<<<<<< HEAD
 			ColorButton.activeButton.GetComponent<ColorButton>().RawImageAlpha(new Color32(255, 255, 255, 255));
 
             Colors.selectedColor = ColorButton.activeButton.GetComponent<ColorButton>().ButtonColor;
             Colors.instance.SelectedColor();            
+=======
+			ColorButton.activeButton.GetComponent<ColorButton>().RawImageAlpha(new Color32(255, 255, 255, 255));
+
+            Colors.selectedColor = ColorButton.activeButton.GetComponent<ColorButton>().ButtonColor;
+            Colors.instance.SelectedColor();            
+>>>>>>> master
         }
 		else
 		{
@@ -22,10 +29,17 @@ public class ColorButtonClick : MonoBehaviour, IPointerClickHandler {
 			ColorButton.activeButton.GetComponent<ColorButton>().RawImageAlpha(new Color32(255, 255, 255, 0));
 			ColorButton.activeButton = this.transform.parent;
 			ColorButton.activeButton.GetComponent<ColorButton>().myAnimator.enabled = true;
+<<<<<<< HEAD
 			ColorButton.activeButton.GetComponent<ColorButton>().RawImageAlpha(new Color32(255, 255, 255, 255));
 
             Colors.selectedColor = ColorButton.activeButton.GetComponent<ColorButton>().ButtonColor;
             Colors.instance.SelectedColor();            
+=======
+			ColorButton.activeButton.GetComponent<ColorButton>().RawImageAlpha(new Color32(255, 255, 255, 255));
+
+            Colors.selectedColor = ColorButton.activeButton.GetComponent<ColorButton>().ButtonColor;
+            Colors.instance.SelectedColor();            
+>>>>>>> master
         }
 	}
 	#endregion

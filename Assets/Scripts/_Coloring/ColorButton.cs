@@ -36,8 +36,14 @@ public class ColorButton : MonoBehaviour {
 		rawImage.color = newColor;
 	}
 
+<<<<<<< HEAD
     public Colors.COLORS ButtonColor
     {
         get { return myColor; }
+=======
+    public Colors.COLORS ButtonColor
+    {
+        get { return myColor; }
+>>>>>>> master
     }
 }

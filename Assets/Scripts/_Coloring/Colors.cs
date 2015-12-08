@@ -17,11 +17,19 @@ public class Colors : MonoBehaviour {
     RectTransform CompleteButton;
 
 //	[SerializeField]
+<<<<<<< HEAD
 //	Text text;
 
 	string aspect;
     // Use this for initialization
     void Start () {
+=======
+//	Text text;
+
+	string aspect;
+    // Use this for initialization
+    void Start () {
+>>>>>>> master
         instance = this;
 
 		aspect = string.Format("{0:#.##}", Camera.main.aspect);
@@ -45,6 +53,7 @@ public class Colors : MonoBehaviour {
 	
 	}
 
+<<<<<<< HEAD
     public void SelectedColor()
     {
         print(selectedColor.ToString());
@@ -68,6 +77,31 @@ public class Colors : MonoBehaviour {
                 break;
             case COLORS.GREEN:
                 return new Color32(48, 73, 9, 255);
+=======
+    public void SelectedColor()
+    {
+        print(selectedColor.ToString());
+    }
+
+    public Color32 SelectedColorValue()
+    {
+        switch(selectedColor)
+        {
+            case COLORS.BLUE:
+                return new Color32(94, 132, 160, 255);
+                break;
+            case COLORS.GREY:
+                return new Color32(108, 99, 107, 255);
+                break;
+            case COLORS.FLESH:
+                return new Color32(232, 194, 127, 255);
+                break;
+            case COLORS.BROWN:
+                return new Color32(171, 116, 83, 255);
+                break;
+            case COLORS.GREEN:
+                return new Color32(48, 73, 9, 255);
+>>>>>>> master
                 break;
 			case COLORS.YELLOW:
 				return new Color32(255, 255, 153, 255);
@@ -77,6 +111,7 @@ public class Colors : MonoBehaviour {
 				break;
 			case COLORS.PURPLE:
 				return new Color32(174, 76, 231, 255);
+<<<<<<< HEAD
 				break;
             default:
                 return new Color32(255, 255, 255, 255);
@@ -87,6 +122,18 @@ public class Colors : MonoBehaviour {
     int ctr = 0;
     public void ClickCheck()
     {
+=======
+				break;
+            default:
+                return new Color32(255, 255, 255, 255);
+                break;
+        }        
+    }
+
+    int ctr = 0;
+    public void ClickCheck()
+    {
+>>>>>>> master
         ctr++;        
 		switch(bookAct)
 		{
@@ -104,6 +151,10 @@ public class Colors : MonoBehaviour {
 				CompleteButton.gameObject.SetActive(true);
 			}
 			break;
+<<<<<<< HEAD
 		}
+=======
+		}
+>>>>>>> master
     }
 }

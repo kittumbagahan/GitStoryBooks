@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+<<<<<<< HEAD
 using System;
 using UnityEngine.UI;
 
+=======
+using System;
+using UnityEngine.UI;
+
+>>>>>>> master
 public class Collision : MonoBehaviour {
 
     [SerializeField]
@@ -21,6 +27,7 @@ public class Collision : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+<<<<<<< HEAD
 	}    
    
     void OnMouseDown()
@@ -48,6 +55,35 @@ public class Collision : MonoBehaviour {
             GreyLayer.color = Colors.instance.SelectedColorValue();
         }                   
     }
+=======
+	}    
+   
+    void OnMouseDown()
+    {
+        if (!clicked)
+        {
+            clicked = true;
+            Colors.instance.ClickCheck();
+        }
+
+        //print("Clicked " + gameObject.name);
+        if (Colors.selectedColor == Color)
+        {            
+            GreyLayer.enabled = false; WhiteLayer.enabled = false;
+            print("correct color");            
+        }
+        else if(Colors.selectedColor == Colors.COLORS.NULL)
+        {
+
+        }
+        else
+        {          
+            print("not correct color, selected color: " + Colors.selectedColor + " area color: " + Color);
+            GreyLayer.enabled = true; WhiteLayer.enabled = false;
+            GreyLayer.color = Colors.instance.SelectedColorValue();
+        }                   
+    }
+>>>>>>> master
 
 	void OnMouseUp()
 	{
@@ -60,9 +96,17 @@ public class Collision : MonoBehaviour {
 			print("up with color");
 		}
 	}
+<<<<<<< HEAD
 
     //public Colors.COLORS MyColor
     //{
     //    get { return Color; }
     //}
+=======
+
+    //public Colors.COLORS MyColor
+    //{
+    //    get { return Color; }
+    //}
+>>>>>>> master
 }
