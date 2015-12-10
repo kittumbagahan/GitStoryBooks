@@ -18,10 +18,6 @@ public class SceneSpawner : MonoBehaviour {
 		print(lstScenes.Count-1);
         ins = this;
         o = (GameObject)Instantiate(lstScenes[sceneIndex]);
-
-		// added by kit
-		SetMyParent(o);
-
         lstPool.Add(o);
         curr = o;
         sceneIndex++; //for the "next" object see Line 26
@@ -30,10 +26,6 @@ public class SceneSpawner : MonoBehaviour {
         {
             //pool the next object
             o = (GameObject)Instantiate(lstScenes[sceneIndex]);
-
-			// added by kit
-			SetMyParent(o);
-
             lstPool.Add(o);
             next = o;
             next.SetActive(false);
@@ -99,10 +91,6 @@ public class SceneSpawner : MonoBehaviour {
                 else if (!HasDuplicate(lstScenes[sceneIndex]))
                 {
                     o = (GameObject)Instantiate(lstScenes[sceneIndex]);
-
-					// added by kit
-					SetMyParent(o);
-
                     lstPool.Add(o);
                     next = o;
                 }
@@ -123,13 +111,6 @@ public class SceneSpawner : MonoBehaviour {
             UIBtnPrev.interactable = true;
         }
       
-	}
-
-	void SetMyParent(GameObject _object)// added by kit
-	{
-		_object.transform.SetParent(transform);
-		_object.transform.localScale = new Vector3(0.8f, 0.8f, 1);
-		_object.GetComponent<RectTransform>().localPosition = new Vector3(-407, 304, 0);
 	}
 
 	void Trace(){
