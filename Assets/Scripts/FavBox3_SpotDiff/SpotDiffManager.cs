@@ -41,7 +41,14 @@ public class SpotDiffManager : AspectManager {
 
     IEnumerator IEGenerateSpot()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
+
+//		for (int i = 0; i < lstObjectToSpot.Count; i++) 
+//		{
+//			
+//			lstObjectToSpot[i].gameObject.SetActive(true);
+//			
+//		}
 
         if (setIndex < lstClone.Count - 1)
         {
