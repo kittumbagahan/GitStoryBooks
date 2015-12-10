@@ -35,6 +35,7 @@ public class Slot : MonoBehaviour {
 
     public void CheckSlot()
     {
+        //print("CheckSlot");
         if (transform.childCount > 0)
         {
             empty = false;

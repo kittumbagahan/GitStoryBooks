@@ -287,13 +287,13 @@ public class WordGameManager : MonoBehaviour {
 				Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
 				itm.delegateDrop += CheckWord;
 			}
-            for(int i=0; i<InventoryManager.ins.slots.Count; i++)
-            {
-                Slot s = InventoryManager.ins.slots[i].GetComponent<Slot>();
-                s.CheckSlot();
-            }
-
-           // AlignSlots(groupClue.transform, dist, word);
+            //for(int i=0; i<InventoryManager.ins.slots.Count; i++)
+            //{
+            //    Slot s = InventoryManager.ins.slots[i].GetComponent<Slot>();
+            //    s.CheckSlot();
+            //}
+            InventoryManager.ins.InitSlotEvents();
+            // AlignSlots(groupClue.transform, dist, word);
             //AlignSlots(groupLetters.transform, dist, strExtracted);
             if (OnGenerate != null)
             {
