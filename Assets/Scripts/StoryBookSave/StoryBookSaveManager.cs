@@ -1,38 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ActivityNumber { ONE, TWO, THREE }
+//public enum ActivityNumber { ONE, TWO, THREE }
 public enum Module { COLORING, SPOTDIFF, MISSINGLETTER }
-public enum Status { DONE, NOT_DONE}
 
 public class StoryBookSaveManager : MonoBehaviour {
 
 	public static StoryBookSaveManager instance;
 	
-	ActivityNumber activityNumber;
+	//ActivityNumber activityNumber;
 
-	Status done;
+	int activityDone = 0;
+	
 	// Use this for initialization
 	void Start () 
 	{
 		instance = this;
 	}
 
-	public void Save(StoryBookEnum.StoryBook book, Module module, ActivityNumber activityNumber)
+	public void Save(StoryBookEnum.StoryBook book, Module module)
 	{
-		done = Status.DONE;
-		PlayerPrefs.SetString(book.ToString() + "+" + module.ToString() + "_" + activityNumber.ToString(), done.ToString());
-	}
-
-	public string Load(StoryBookEnum.StoryBook book, Module module, ActivityNumber activityNumber)
-	{
-		if(!PlayerPrefs.HasKey(book.ToString() + "+" + module.ToString() + "_" + activityNumber.ToString()))
-		{
-			return Status.NOT_DONE.ToString();
+		if(!PlayerPrefs.HasKey((book.ToString() + "+" + module.ToString())))
+	   	{
+			activityDone = 1;
 		}
 		else
 		{
-			return Status.DONE.ToString();
+			activityDone = PlayerPrefs.GetInt(book.ToString() + "+" + module.ToString()) + 1;
+		}
+
+		PlayerPrefs.SetInt(book.ToString() + "+" + module.ToString(), activityDone);
+
+		activityDone = 0;// Reset coutn
+	}
+
+	public int Load(StoryBookEnum.StoryBook book, Module module)
+	{
+		if(!PlayerPrefs.HasKey(book.ToString() + "+" + module.ToString()))
+		{
+			return activityDone;
+		}
+		else
+		{
+			return PlayerPrefs.GetInt(book.ToString() + "+" + module.ToString());
 		}
 	}
 }
