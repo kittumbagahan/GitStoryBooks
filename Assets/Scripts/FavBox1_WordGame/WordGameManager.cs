@@ -303,6 +303,7 @@ public class WordGameManager : MonoBehaviour {
 		catch(ArgumentOutOfRangeException)
 		{
 			print("All words has been answered. GAME OVER");
+			ActivityDone.instance.Done();
 		}
 	}
 

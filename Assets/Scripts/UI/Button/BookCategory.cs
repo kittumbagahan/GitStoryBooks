@@ -83,6 +83,6 @@ public class BookCategory : MonoBehaviour, IPointerClickHandler {
 	IEnumerator SceneLoadWait()
 	{
 		yield return new WaitForSeconds(1f);
-		SceneLoader.instance.Load(sceneName);
+		StartCoroutine(SceneLoader.instance.Load(sceneName));
 	}
 }

@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour {
 	
 	public static SceneLoader instance;
 
+	[SerializeField]
+	Text loading;
 	// Use this for initialization
 	void Start () {
 		instance = this;
@@ -15,13 +18,16 @@ public class SceneLoader : MonoBehaviour {
 	
 	}
 
-	public void Load(int index)
+	public IEnumerator Load(int index)
 	{
-		Application.LoadLevel(index);
+		AsyncOperation async = Application.LoadLevelAsync(index);
+		yield return async;
 	}
 
-	public void Load(string name)
+	public IEnumerator Load(string name)
 	{
-		Application.LoadLevel(name);
+		loading.gameObject.SetActive(true);
+		AsyncOperation async = Application.LoadLevelAsync(name);
+		yield return async;
 	}
 }
