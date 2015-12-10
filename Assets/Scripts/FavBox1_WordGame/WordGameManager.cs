@@ -197,7 +197,7 @@ public class WordGameManager : MonoBehaviour {
 		//remove items from the slot
 		for(int i=0; i<InventoryManager.ins.items.Count; i++){
 			Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-			itm.delegateDrop -= CheckWord;
+			itm.OnDrop -= CheckWord;
 			Destroy(InventoryManager.ins.items[i]);
 			/*
 			Transform t = null;
@@ -285,7 +285,7 @@ public class WordGameManager : MonoBehaviour {
 			for(int i=0; i<InventoryManager.ins.items.Count; i++)
 			{
 				Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-				itm.delegateDrop += CheckWord;
+				itm.OnDrop += CheckWord;
 			}
             //for(int i=0; i<InventoryManager.ins.slots.Count; i++)
             //{

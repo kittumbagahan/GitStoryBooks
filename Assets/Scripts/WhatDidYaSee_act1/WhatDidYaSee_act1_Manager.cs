@@ -10,7 +10,7 @@ public class WhatDidYaSee_act1_Manager : MonoBehaviour {
         for(int i=0; i<InventoryManager.ins.items.Count; i++)
         {
             Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.delegateDrop += Check;
+            itm.OnDrop += Check;
         }
 	}
 	

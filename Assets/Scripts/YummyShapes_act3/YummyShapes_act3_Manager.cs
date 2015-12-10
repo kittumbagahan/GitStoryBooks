@@ -22,7 +22,7 @@ public class YummyShapes_act3_Manager : MatchingManager {
             for (int i = 0; i < InventoryManager.ins.items.Count; i++)
             {
                 Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-                itm.delegateDrop += IncPts;
+                itm.OnDrop += IncPts;
             }
         }
 

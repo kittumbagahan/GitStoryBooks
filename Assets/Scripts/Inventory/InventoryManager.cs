@@ -169,7 +169,7 @@ public class InventoryManager : MonoBehaviour {
 			//print(Vector2.Distance(sTrans.position, obj.transform.position) + sTrans.gameObject.name);
 			if(s.empty && Vector2.Distance(sTrans.position, obj.transform.position) < checkDist && itm.eColor == s.eColor)
 			{				
-				itm.Origin = sTrans;
+				//itm.Origin = sTrans;
 				obj.transform.SetParent(sTrans);
 				obj.transform.SetLocalXPos(0);
 				obj.transform.SetLocalYPos(0);
