@@ -2,42 +2,28 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Colors : MonoBehaviour {
+public class Colors : AspectManager {
 
     public static Colors instance;
 
     public enum COLORS { NULL, BLUE, GREY, FLESH, BROWN, GREEN, PURPLE, RED, YELLOW };
-	public enum BOOKACT { NULL, FAVBOX, COLORSALLMIXEDUP };
+	//public enum BOOKACT { NULL, FAVBOX, COLORSALLMIXEDUP };
 
     public static COLORS selectedColor = COLORS.NULL;
 
-	[SerializeField] BOOKACT bookAct;
+	[SerializeField] StoryBookEnum.StoryBook bookAct;
 
     [SerializeField]
     RectTransform CompleteButton;
 
 //	[SerializeField]
 //	Text text;
-
-	string aspect;
+	
     // Use this for initialization
     void Start () {
         instance = this;
 
-		aspect = string.Format("{0:#.##}", Camera.main.aspect);
-		//text.text = Screen.width + " " + Screen.height;	
-		switch(aspect)
-		{
-		case "1.33":
-			transform.GetChild(0).localScale = new Vector3(1.2f, 1.2f, 1f);
-			break;
-		case "1.5":
-			transform.GetChild(0).localScale = new Vector3(1.06f, 1.06f, 1f);
-			break;
-		case "1.42":
-			transform.GetChild(0).localScale = new Vector3(1.115f, 1.115f, 1f);
-			break;
-		}
+		Aspect();
 	}
 	
 	// Update is called once per frame
@@ -90,14 +76,14 @@ public class Colors : MonoBehaviour {
         ctr++;        
 		switch(bookAct)
 		{
-		case BOOKACT.FAVBOX:
+		case StoryBookEnum.StoryBook.FAVORITE_BOX:
 			if(ctr == 5)
 			{
 				print("Colored all area");
 				CompleteButton.gameObject.SetActive(true);
 			}
 			break;
-		case BOOKACT.COLORSALLMIXEDUP:
+		case StoryBookEnum.StoryBook.COLORS_ALL_MIXED_UP:
 			if(ctr == 6)
 			{
 				print("Colored all area");

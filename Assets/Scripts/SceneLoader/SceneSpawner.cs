@@ -87,6 +87,11 @@ public class SceneSpawner : MonoBehaviour {
             sceneIndex++; //for the "next" object
             try
             {
+				if(lstPool.Count + 1 == sceneIndex)
+				{
+					Application.LoadLevel(Application.loadedLevelName);
+				}
+
                 if (HasDuplicate(lstScenes[sceneIndex]))
                 {
                     next = lstPool[sceneIndex];
@@ -105,7 +110,7 @@ public class SceneSpawner : MonoBehaviour {
             catch (System.ArgumentOutOfRangeException ex)
             {
                 next = null;
-                UIBtnNext.interactable = false;
+                //UIBtnNext.interactable = false;
             }
 
             if (curr != null) curr.SetActive(true);

@@ -27,7 +27,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		startPos = Input.mousePosition.x;
-		//print("start drag " + startPos);
+		print("start drag " + startPos);
 	}
 
 	#endregion
@@ -36,7 +36,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
 	public void OnDrag (PointerEventData eventData)
 	{
-	//	print("drag");
+		print("drag");
 	}
 
 	#endregion
@@ -48,17 +48,17 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 		endPos = Input.mousePosition.x;
 		total = startPos - endPos;
 
-		//print("total :" + total + ", distance: " + distance);
+		print("total :" + total + ", distance: " + distance);
 
 		if(Mathf.Abs(total) >= distance)
 		{
 			if(total < 0)
 			{
-                SceneSpawner.ins.Next();
+				SceneSpawner.ins.Next();
 			}
 			else
 			{
-                SceneSpawner.ins.Prev();
+				SceneSpawner.ins.Prev();
               
 			}
 		}

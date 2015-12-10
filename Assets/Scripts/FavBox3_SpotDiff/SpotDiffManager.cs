@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-public class SpotDiffManager : MonoBehaviour {
+public class SpotDiffManager : AspectManager {
     public static SpotDiffManager ins;
     public List<Sprite> lstClone;
     public List<Sprite> lstDiff;
@@ -16,6 +16,7 @@ public class SpotDiffManager : MonoBehaviour {
 	void Start () {
         ins = this;
         GenerateSpot();
+		Aspect();
 	}
 	
 	// Update is called once per frame
@@ -59,6 +60,7 @@ public class SpotDiffManager : MonoBehaviour {
         }
         else {
             print("GameOver");
+			ActivityDone.instance.Done();
         }
        
     }

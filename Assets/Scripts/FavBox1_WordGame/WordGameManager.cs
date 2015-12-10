@@ -303,6 +303,8 @@ public class WordGameManager : MonoBehaviour {
 		catch(ArgumentOutOfRangeException)
 		{
 			print("All words has been answered. GAME OVER");
+			//added by kit
+			GameObject.Find("Canvas_WORD_GAME").GetComponent<ActivityDone>().Done();
 		}
 	}
 
