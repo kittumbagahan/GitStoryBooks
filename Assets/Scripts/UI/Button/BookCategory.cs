@@ -27,7 +27,7 @@ public class BookCategory : MonoBehaviour, IPointerClickHandler {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log(transform.position);
-		if(rect.position.x >= 450 && rect.position.x <= 550)
+		if(rect.localPosition.x >= 120 && rect.localPosition.x <= 250)
 		{
 			transform.localScale = new Vector2(1.5f, 1.5f);
 			transform.SetAsLastSibling();
@@ -41,17 +41,17 @@ public class BookCategory : MonoBehaviour, IPointerClickHandler {
 			GetComponent<Image>().raycastTarget = false;
 		}
 
-		if(rect.position.x > 850)
+		if(rect.localPosition.x > 850)
 		{
-			transform.localPosition = new Vector3(book.AfterMe.transform.localPosition.x - 135,
-			                                      book.AfterMe.transform.localPosition.y,
-			                                      book.AfterMe.transform.localPosition.z);
+			rect.localPosition = new Vector3(book.AfterMe.GetComponent<RectTransform>().localPosition.x - 135,
+			                                 book.AfterMe.GetComponent<RectTransform>().localPosition.y,
+			                                 book.AfterMe.GetComponent<RectTransform>().localPosition.z);
 		}
 		else if(rect.position.x <= -350)
 		{
-			transform.localPosition = new Vector3(book.BeforeMe.transform.localPosition.x + 135,
-			                                      book.BeforeMe.transform.localPosition.y,
-			                                      book.BeforeMe.transform.localPosition.z);
+			transform.localPosition = new Vector3(book.BeforeMe.GetComponent<RectTransform>().localPosition.x + 135,
+			                                      book.BeforeMe.GetComponent<RectTransform>().localPosition.y,
+			                                      book.BeforeMe.GetComponent<RectTransform>().localPosition.z);
 		}
 	}
 
