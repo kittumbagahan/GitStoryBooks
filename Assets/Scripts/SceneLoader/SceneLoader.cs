@@ -30,4 +30,14 @@ public class SceneLoader : MonoBehaviour {
 		AsyncOperation async = Application.LoadLevelAsync(name);
 		yield return async;
 	}
+
+	public void LoadInt(int index)
+	{
+		Application.LoadLevel(index);
+	}
+
+	public void LoadStr(string name)
+	{
+		Application.LoadLevel(name);
+	}
 }
