@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AfterTheRain_Act1_Manager : MonoBehaviour {
 
-    public enum ETilDirection { left, right}
-    public ETilDirection eTiltDir;
+   
+    public ETiltDirection eTiltDir;
     public float maxTilt = 20;
     public Sprite sprtSlotXitemBG;
 
