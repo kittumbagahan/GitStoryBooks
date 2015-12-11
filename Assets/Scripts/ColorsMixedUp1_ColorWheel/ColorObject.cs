@@ -11,7 +11,7 @@ public class ColorObject : MonoBehaviour {
     void Start () {
         //container = transform.parent;
         itm = GetComponent<Item>();
-        itm.delegateDrop += Drop;
+        itm.OnDrop += Drop;
         //OnInserted += ColorWheelManager.ins.IncPoints;
 	}
 

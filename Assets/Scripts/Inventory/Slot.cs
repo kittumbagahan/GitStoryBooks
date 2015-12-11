@@ -16,7 +16,7 @@ public class Slot : MonoBehaviour {
         for (int i = 0; i < InventoryManager.ins.items.Count; i++)
         {
             itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.delegateDrop += CheckSlot;
+            itm.OnDrop += CheckSlot;
 
         }
         CheckSlot();
@@ -29,7 +29,7 @@ public class Slot : MonoBehaviour {
         for (int i = 0; i < InventoryManager.ins.items.Count; i++)
         {
             itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.delegateDrop -= CheckSlot;
+            itm.OnDrop -= CheckSlot;
         }
     }
 

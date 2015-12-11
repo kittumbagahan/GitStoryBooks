@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+
+
 public class ChatMyCatRhymeManager : MonoBehaviour {
 
 	public List<AudioClip> lstAudio;
@@ -10,13 +12,22 @@ public class ChatMyCatRhymeManager : MonoBehaviour {
 
     int index = -1;
     AudioSource audSrc;
-   
+    public Sprite[] sprtClicked;
+    SpriteState tempSpriteState; //remove button pressed sprite to make this visually working
+
     Button recentBtnClicked = null;
+    [SerializeField]
+    Button[] btns = new Button[4];
     void Start () {
         index++;
         ListOptions();
         audSrc = GetComponent<AudioSource>();
-	}
+        for (int i = 0; i < lstText.Count; i++)
+        {
+            btns[i] = lstText[i].transform.parent.GetComponent<Button>();
+            //btn.enabled = b;
+        }
+    }
 
     // Update is called once per frame
     void ListOptions()
@@ -83,6 +94,12 @@ public class ChatMyCatRhymeManager : MonoBehaviour {
         txt = btnOption.transform.GetChild(0).GetComponent<Text>();
         recentBtnClicked = btnOption.GetComponent<Button>();
         recentBtnClicked.interactable = false;
+        //disable other buttons for the meantime to avoid clicking so many button at time
+        for (int i = 0; i < btns.Length; i++){
+            if (btns[i] != recentBtnClicked){
+                btns[i].enabled = false;
+            }
+        }
         CheckAnswer(txt.text);
     }
 
@@ -103,19 +120,30 @@ public class ChatMyCatRhymeManager : MonoBehaviour {
 
     IEnumerator IECorrect() {
         print("Correct!");
-        yield return new WaitForSeconds(1f);
+        tempSpriteState.disabledSprite = sprtClicked[0];
+        recentBtnClicked.spriteState = tempSpriteState;
+        yield return new WaitForSeconds(2f);
         index++;
         ListOptions();
         recentBtnClicked.interactable = true;
+        for (int i = 0; i < btns.Length; i++) {
+            btns[i].enabled = true;
+        }
     }
 
     IEnumerator IEWrong() {
         print("WRONG");
-        yield return new WaitForSeconds(0.5f);
+        tempSpriteState.disabledSprite = sprtClicked[1];
+        recentBtnClicked.spriteState = tempSpriteState;
+        yield return new WaitForSeconds(1f);
         recentBtnClicked.interactable = true;
-
+        //CheckButtonsState();
+        for (int i = 0; i < btns.Length; i++){
+            btns[i].enabled = true; 
+        }
     }
 
+   
     void CheckAnswer(string ans)
     {
         switch (index)

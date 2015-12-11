@@ -11,7 +11,7 @@ public class ColorsMixedUpMatchingManager : MonoBehaviour {
         for(int i=0; i<InventoryManager.ins.items.Count; i++)
         {
             itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.delegateDrop += IncPoints;
+            itm.OnDrop += IncPoints;
         }
 	}
 

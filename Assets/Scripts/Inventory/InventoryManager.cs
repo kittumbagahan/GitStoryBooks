@@ -15,7 +15,7 @@ public enum EDragDirection
 {
     all, x, y
 }
-public class InventoryManager : AspectManager {
+public class InventoryManager : MonoBehaviour {
 	public static InventoryManager ins;
 
     public bool EnSwap = false; //if items swapping is allowed, RECOMMENDED USE FOR PUZZLE
@@ -54,7 +54,7 @@ public class InventoryManager : AspectManager {
 	}
 	void Start () 
 	{
-		Aspect();
+			
 	}
 	public List<GameObject> ListSlot{
 		set { slots = value;}
@@ -169,7 +169,7 @@ public class InventoryManager : AspectManager {
 			//print(Vector2.Distance(sTrans.position, obj.transform.position) + sTrans.gameObject.name);
 			if(s.empty && Vector2.Distance(sTrans.position, obj.transform.position) < checkDist && itm.eColor == s.eColor)
 			{				
-				itm.Origin = sTrans;
+				//itm.Origin = sTrans;
 				obj.transform.SetParent(sTrans);
 				obj.transform.SetLocalXPos(0);
 				obj.transform.SetLocalYPos(0);
