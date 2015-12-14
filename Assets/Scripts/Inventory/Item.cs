@@ -10,8 +10,12 @@ public class Item : MonoBehaviour {
 	bool dragging=false; //for local dragging
 	bool locked; //use along with WorldGameManager if item is under clue
 
-	public delegate void DelDrop();
-	public DelDrop delegateDrop;
+    public delegate void ActionInsert(Transform parent, Transform dis);
+    public delegate void ActionBeginDrag(GameObject obj);
+	public delegate void ActionDrop();
+	public static event ActionDrop OnDrop;
+    public static event ActionInsert OnInsert;
+    public static event ActionBeginDrag OnBeginDrag;
 	//public event delDrop OnDrop;
 
 	#region
@@ -64,17 +68,25 @@ public class Item : MonoBehaviour {
        
         if (InventoryManager.ins.IsReparented(this.gameObject)) {
             //reparent happened
-            if (delegateDrop != null) {
-                delegateDrop();
-                transform.SetLocalZRot(transform.parent.GetLocalZRot());
+            origin = transform.parent;
+            if (OnDrop != null) {
+                OnDrop();
+                transform.SetLocalZRot(transform.parent.GetLocalZRot());   
             }
-            //WordGameManager.ins.CheckWord();
+            if (OnInsert != null)
+            {
+                //print("webzen");
+                OnInsert(transform.parent, this.transform);
+            }
+            else {
+                //print("NO INSERT");
+            }
         }
         else if (InventoryManager.ins.IsSwapped(this.gameObject))
         {
-            if (delegateDrop != null)
+            if (OnDrop != null)
             {
-                delegateDrop();
+                OnDrop();
             }
         }
         else {
@@ -83,19 +95,21 @@ public class Item : MonoBehaviour {
             transform.SetLocalYPos(0);
             //print("wow");
         }
-			
-		dragging  =false;
+     
+        dragging  =false;
 		InventoryManager.ins.Dragging = false;
 
 	}
 
 	public void Begin()
 	{
-        // print("drag begin");
         InventoryManager.ins.TransItemRecentSlot = origin;
         if (!InventoryManager.ins.Dragging && !locked){
             //print("drag begin");
-            
+            if (OnBeginDrag != null)
+            {
+                OnBeginDrag(gameObject);
+            }
 			//remove object from its slot
 			transform.SetParent(InventoryManager.ins.transform);
 			InventoryManager.ins.Dragging = true;
@@ -104,8 +118,5 @@ public class Item : MonoBehaviour {
 		}
 	}
 
-    public void Hi() {
-        print("Hi");
-    }
-
+    
 }

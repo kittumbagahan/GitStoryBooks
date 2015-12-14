@@ -44,9 +44,10 @@ public class ColorWheelManager : MonoBehaviour {
         {
             itm = InventoryManager.ins.items[i].GetComponent<Item>();
             clrObj = itm.GetComponent<ColorObject>();
-            itm.delegateDrop += Spin;
+            //itm.OnDrop += Spin;
             clrObj.OnInserted += IncPoints;
-        }       
+        }
+        Item.OnDrop += Spin;
     }
 
     void Spin()

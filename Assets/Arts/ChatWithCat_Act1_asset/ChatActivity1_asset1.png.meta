@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 022a0a8311d0bc54dba2d6f352f9f5d3
-timeCreated: 1448599043
+timeCreated: 1449817363
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,7 @@ TextureImporter:
     21300002: ChatActivity1_asset1_1
     21300004: ChatActivity1_asset1_2
     21300006: ChatActivity1_asset1_3
+    21300008: ChatActivity1_asset1_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,41 +64,51 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 569
+        y: 813
         width: 477
-        height: 477
+        height: 486
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ChatActivity1_asset1_1
       rect:
         serializedVersion: 2
         x: 512
-        y: 569
+        y: 822
         width: 477
         height: 477
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ChatActivity1_asset1_2
       rect:
         serializedVersion: 2
         x: 16
-        y: 292
+        y: 545
         width: 719
         height: 226
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ChatActivity1_asset1_3
       rect:
         serializedVersion: 2
         x: 16
-        y: 55
+        y: 308
         width: 719
         height: 226
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChatActivity1_asset1_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 58
+        width: 719
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
