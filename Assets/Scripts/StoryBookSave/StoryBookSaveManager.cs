@@ -31,7 +31,7 @@ public class StoryBookSaveManager : MonoBehaviour {
 
 		PlayerPrefs.SetInt(book.ToString() + "+" + module.ToString(), activityDone);
 
-		activityDone = 0;// Reset coutn
+		activityDone = 0;// Reset count
 	}
 
 	public int Load(StoryBookEnum.StoryBook book, Module module)
