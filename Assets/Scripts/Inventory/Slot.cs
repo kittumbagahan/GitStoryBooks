@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Slot : MonoBehaviour {
 
-    public EColor eColor = new EColor();
+    public EID eColor = new EID();
     public bool empty = true;
 	void Start () {
         //InventoryManager.ins.slots.Add(this.gameObject);

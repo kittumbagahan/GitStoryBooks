@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Item : MonoBehaviour {
 
-    public EColor eColor = new EColor();
+    public EID eColor = new EID();
     [SerializeField]
     Transform origin;
 

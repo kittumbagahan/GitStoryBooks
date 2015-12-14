@@ -6,7 +6,7 @@ using System;
 ONLY ONE ITEM CAN BE DRAG AT TIME
  */
 
-public enum EColor
+public enum EID
 {
     
     non, red, green, blue, purple, orange, yellow, pink, teal, white, black, brown, cyan
