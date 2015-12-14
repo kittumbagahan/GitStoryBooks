@@ -5,7 +5,9 @@ public class Item : MonoBehaviour {
 
     public EColor eColor = new EColor();
     [SerializeField]
-    Transform origin;
+    Transform startOrigin; //the origin on creation
+    [SerializeField]
+    Transform recentParent;
 
 	bool dragging=false; //for local dragging
 	bool locked; //use along with WorldGameManager if item is under clue
@@ -19,11 +21,13 @@ public class Item : MonoBehaviour {
 	//public event delDrop OnDrop;
 
 	#region
-	public Transform Origin{
-		set{origin = value;}
-		get{return origin;}
+	public Transform RecentParent{
+		set{recentParent = value;}
+		get{return recentParent;}
 	}
-
+    public Transform StartOrigin {
+        get { return startOrigin; }
+    }
     public bool Locked
     {
         set { locked = value; }
@@ -33,15 +37,16 @@ public class Item : MonoBehaviour {
     #endregion
 
     void Start () {
-		origin = transform.parent;
-		//InventoryManager.ins.items.Add(this.gameObject);
+		recentParent = transform.parent;
+        startOrigin = recentParent;
+        //InventoryManager.ins.items.Add(this.gameObject);
 
 	}
 
  
     public void SetParentToParent()
     {
-        origin = transform.parent;
+        recentParent = transform.parent;
     }
 
 	
@@ -68,7 +73,7 @@ public class Item : MonoBehaviour {
        
         if (InventoryManager.ins.IsReparented(this.gameObject)) {
             //reparent happened
-            origin = transform.parent;
+            recentParent = transform.parent;
             if (OnDrop != null) {
                 OnDrop();
                 transform.SetLocalZRot(transform.parent.GetLocalZRot());   
@@ -90,7 +95,7 @@ public class Item : MonoBehaviour {
             }
         }
         else {
-            transform.SetParent(origin);
+            transform.SetParent(recentParent);
             transform.SetLocalXPos(0);
             transform.SetLocalYPos(0);
             //print("wow");
@@ -103,7 +108,7 @@ public class Item : MonoBehaviour {
 
 	public void Begin()
 	{
-        InventoryManager.ins.TransItemRecentSlot = origin;
+        InventoryManager.ins.TransItemRecentSlot = recentParent;
         if (!InventoryManager.ins.Dragging && !locked){
             //print("drag begin");
             if (OnBeginDrag != null)
@@ -118,5 +123,10 @@ public class Item : MonoBehaviour {
 		}
 	}
 
-    
+    public void Return()
+    {
+        transform.SetParent(startOrigin);
+        transform.SetLocalXPos(0);
+        transform.SetLocalYPos(0);
+    }
 }

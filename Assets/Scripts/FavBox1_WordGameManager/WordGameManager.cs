@@ -25,6 +25,11 @@ public class WordGameManager : MonoBehaviour {
 	string strClue;  //clue
 	string word;
 	int index=0, rnd=0;
+    [SerializeField]
+    Color32 clr32Correct;
+    public string Word {
+        get { return word; }
+    }
 
 	void ExtractWord()
 	{
@@ -141,7 +146,7 @@ public class WordGameManager : MonoBehaviour {
 
 	public void CheckWord()
 	{
-        print("check");
+        //print("check");
 		string str="";
 		for(int i=0; i<groupClue.transform.childCount; i++)
 		{
@@ -170,7 +175,8 @@ public class WordGameManager : MonoBehaviour {
 
 			StartCoroutine(IEGoNext());
 			//Next();
-		}else{
+		}else if(str.Length == word.Length && str != word){
+            StartCoroutine(IEWrong(InventoryManager.ins.items));
 			print("DONT GIVE UP");
 		}
 	}
@@ -313,7 +319,19 @@ public class WordGameManager : MonoBehaviour {
 
 
 	IEnumerator IEGoNext(){
-		yield return new WaitForSeconds(0.5f);
+        Text txt = null;
+        Item itm = null;
+        for (int i = 0; i <InventoryManager.ins.items.Count; i++)
+        {
+            itm = InventoryManager.ins.items[i].GetComponent<Item>();
+            if (InventoryManager.ins.items[i].transform.parent.parent == groupClue.transform)
+            {
+                txt = InventoryManager.ins.items[i].transform.GetChild(0).GetComponent<Text>();
+                txt.color = clr32Correct;
+            }
+
+        }
+        yield return new WaitForSeconds(1f);
 		DestroyAll();
 		yield return new WaitForSeconds(1f);
 		GenerateWord();
@@ -326,6 +344,33 @@ public class WordGameManager : MonoBehaviour {
         StartCoroutine(IEGoNext());
         //print(MonoExtension.RandomLetter("BCDERFGHIJKLMNOPQRSTUVWXY"));
 	}
-	
-	
+
+  
+     IEnumerator IEWrong(List<GameObject> list)
+    {
+        Text txt = null;
+        Item itm = null;
+        Slot s = null;
+        for (int i = 0; i < list.Count; i++)
+        {
+            itm = list[i].GetComponent<Item>();
+            if (list[i].transform.parent.parent == groupClue.transform)
+            {
+                txt = list[i].transform.GetChild(0).GetComponent<Text>();
+                txt.color = Color.red;
+            }
+
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            s = list[i].transform.parent.GetComponent<Slot>();
+            s.empty = true;
+            list[i].GetComponent<Item>().Return();
+            txt = list[i].transform.GetChild(0).GetComponent<Text>();
+            txt.color = Color.black;
+        }
+    }
 }

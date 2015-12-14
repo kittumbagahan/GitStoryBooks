@@ -181,7 +181,7 @@ public class ABCCircus_Act2_Manager : MonoBehaviour {
             if (txt1.text != txt2.text)
             {
                 Item itm = dis.GetComponent<Item>();
-                itm.Origin = transRecentSlot;
+                itm.RecentParent = transRecentSlot;
                 dis.SetParent(transRecentSlot);
                 dis.SetLocalXPos(0);
                 dis.SetLocalYPos(0);
@@ -192,7 +192,7 @@ public class ABCCircus_Act2_Manager : MonoBehaviour {
 
     void SetRecentSlot(GameObject obj)
     {
-        transRecentSlot = obj.GetComponent<Item>().Origin;
+        transRecentSlot = obj.GetComponent<Item>().RecentParent;
     }
 
     //epic fail

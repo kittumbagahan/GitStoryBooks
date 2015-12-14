@@ -9,6 +9,7 @@ public class FavoriteBox_Act1_Manager : MonoBehaviour {
 	void Start () {
         //WordGameManager.OnGenerate += DisableItemsImage;
          WordGameManager.OnGenerate += ChageItemBG;
+        WordGameManager.OnGenerate += ResizeItems;
     }
 
     void DisableItemsImage()
@@ -21,6 +22,20 @@ public class FavoriteBox_Act1_Manager : MonoBehaviour {
         }
     }
 
+
+    void ResizeItems()
+    {
+        RectTransform rect = null;
+        Text txt = null;
+        for(int i=0; i<InventoryManager.ins.items.Count; i++)
+        {
+            rect = InventoryManager.ins.items[i].GetComponent<RectTransform>();
+            rect.SetHeight(70);
+            rect.SetWidth(70);
+            txt = InventoryManager.ins.items[i].transform.GetChild(0).GetComponent<Text>();
+            txt.resizeTextMaxSize = 70;
+        }
+    }
     void ChageItemBG()
     {
         Image img = null;
@@ -29,5 +44,10 @@ public class FavoriteBox_Act1_Manager : MonoBehaviour {
             img = InventoryManager.ins.items[i].GetComponent<Image>();
             img.sprite = itemBG;
         }
+    }
+
+    void Return(Transform parent, Transform item)
+    {
+
     }
 }
