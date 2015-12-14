@@ -16,7 +16,7 @@ public class ColorSlot : MonoBehaviour {
         for (int i = 0; i < InventoryManager.ins.items.Count; i++)
         {
             Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.delegateDrop += CheckSlot;
+            itm.OnDrop += CheckSlot;
         }
     }
 

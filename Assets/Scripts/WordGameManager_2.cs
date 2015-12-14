@@ -17,10 +17,14 @@ public class WordGameManager_2 : MonoBehaviour {
     public static event ActionGenerate OnGenerate;
 
     int wordArrIndex = 0;
+    public string GetWord() {
+        return wordArr[wordArrIndex];
+    }
     void Start()
     {
         ins = this;
-        wordArr.Shuffle();
+        //wordArr.Shuffle();
+        //DO NOT SHUFFLE
         GenerateWord();
     }
 
@@ -40,29 +44,46 @@ public class WordGameManager_2 : MonoBehaviour {
 
     void GenerateWord()
     {
-        for (int i=0; i<wordArr[wordArrIndex].Length; i++)
+        if (wordArrIndex < wordArr.Length - 1)
         {
-            SpawnSlotTo(groupClue.transform, InventoryManager.ins.slots);
-            SpawnSlotTo(groupLetters.transform, InventoryManager.ins.slots);
+            for (int i = 0; i < wordArr[wordArrIndex].Length; i++)
+            {
+                SpawnSlotTo(groupClue.transform, InventoryManager.ins.slots);
+                SpawnSlotTo(groupLetters.transform, InventoryManager.ins.slots);
+            }
+            ChangeClueLetters();
+            DisableSlotsText();
+            for (int i = 0; i < wordArr[wordArrIndex].Length; i++)
+            {
+                SpawnLetterTo(groupLetters.transform.GetChild(i), InventoryManager.ins.items, lstLetters);
+            }
+
+            ChangeItemsText();
+
+            //add check event on item`s drop event
+            for (int i = 0; i < InventoryManager.ins.items.Count; i++)
+            {
+                Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
+                itm.OnDrop += CheckWord;
+            }
+            //check slot if empty
+            for (int i = 0; i < InventoryManager.ins.slots.Count; i++)
+            {
+                Slot s = InventoryManager.ins.slots[i].GetComponent<Slot>();
+                s.CheckSlot();
+            }
+            //add slot events to item`s drop event
+            InventoryManager.ins.InitSlotEvents();
+
+            if (OnGenerate != null)
+            {
+                OnGenerate();
+            }
         }
-        ChangeClueLetters();
-        DisableSlotsText();
-        for (int i=0; i<wordArr[wordArrIndex].Length; i++)
-        {
-            SpawnLetterTo(groupLetters.transform.GetChild(i), InventoryManager.ins.items, lstLetters);
+        else {
+            print("GAMEOVER!");
         }
-        ChangeItemsText();
-        for (int i=0; i<InventoryManager.ins.slots.Count; i++)
-        {
-            Slot s = InventoryManager.ins.slots[i].GetComponent<Slot>();
-            s.CheckSlot();
-        }
-        InventoryManager.ins.InitSlotEvents();
-        
-        if(OnGenerate != null)
-        {
-            OnGenerate();
-        }
+      
     }
 
     void ChangeClueLetters()
@@ -107,4 +128,71 @@ public class WordGameManager_2 : MonoBehaviour {
         }
     }
 
+    public void CheckWord()
+    {
+        string str = "";
+        for (int i = 0; i < groupClue.transform.childCount; i++)
+        {
+            Transform slot = groupClue.transform.GetChild(i);
+            Transform item = null;
+            Text txt = null;
+            if (slot.childCount >= 1)
+            {
+                item = slot.GetChild(0);
+            }
+
+            if (item != null && item.childCount >= 1)
+            {
+                txt = item.GetChild(0).GetComponent<Text>();
+            }
+            if (txt != null)
+            {
+                str += txt.text;
+            }
+
+        }
+        if (str == wordArr[wordArrIndex])
+        {
+            print("Wow! Fantastic baby!");
+            wordArrIndex++;
+            StartCoroutine(IEGoNext());
+         //next
+        }
+        else
+        {
+            print("DONT GIVE UP");
+        }
+    }
+
+    void DestroyAll()
+    {
+        //DisableItems(lstPoolClueLetters, false);
+
+        for (int i = 0; i < InventoryManager.ins.slots.Count; i++)
+        {
+            //InventoryManager.ins.slots[i].SetActive(false);
+            Destroy(InventoryManager.ins.slots[i]);
+        }
+        //remove items from the slot
+        for (int i = 0; i < InventoryManager.ins.items.Count; i++)
+        {
+            //Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
+            //itm.OnDrop -= CheckWord;
+            Destroy(InventoryManager.ins.items[i]);
+       
+        }
+     
+        InventoryManager.ins.slots.Clear();
+        InventoryManager.ins.items.Clear();
+        lstLetters.Clear();
+       
+    }
+
+    IEnumerator IEGoNext()
+    {
+        yield return new WaitForSeconds(0.5f);
+        DestroyAll();
+        yield return new WaitForSeconds(1f);
+        GenerateWord();
+    }
 }

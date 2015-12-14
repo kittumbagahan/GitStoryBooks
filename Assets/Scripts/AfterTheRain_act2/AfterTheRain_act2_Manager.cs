@@ -43,7 +43,7 @@ public class AfterTheRain_act2_Manager : MonoBehaviour {
                 clrObj.OnInserted += IncPoints;
             }
        
-            itm.delegateDrop += GameOver;
+            itm.OnDrop += GameOver;
            
         }
     }
