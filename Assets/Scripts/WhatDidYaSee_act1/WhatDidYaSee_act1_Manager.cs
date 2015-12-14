@@ -10,8 +10,9 @@ public class WhatDidYaSee_act1_Manager : MonoBehaviour {
         for(int i=0; i<InventoryManager.ins.items.Count; i++)
         {
             Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.OnDrop += Check;
+            //itm.OnDrop += Check;
         }
+        Item.OnDrop += Check;
 	}
 	
 	// Update is called once per frame

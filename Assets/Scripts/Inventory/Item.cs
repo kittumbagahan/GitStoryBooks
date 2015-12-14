@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Item : MonoBehaviour {
 
-    public EID eColor = new EID();
+    public EColor eColor = new EColor();
     [SerializeField]
     Transform origin;
 
@@ -13,7 +13,7 @@ public class Item : MonoBehaviour {
     public delegate void ActionInsert(Transform parent, Transform dis);
     public delegate void ActionBeginDrag(GameObject obj);
 	public delegate void ActionDrop();
-	public ActionDrop OnDrop;
+	public static event ActionDrop OnDrop;
     public static event ActionInsert OnInsert;
     public static event ActionBeginDrag OnBeginDrag;
 	//public event delDrop OnDrop;

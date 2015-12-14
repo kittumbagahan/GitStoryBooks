@@ -64,8 +64,9 @@ public class WordGameManager_2 : MonoBehaviour {
             for (int i = 0; i < InventoryManager.ins.items.Count; i++)
             {
                 Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-                itm.OnDrop += CheckWord;
+                //itm.OnDrop += CheckWord;
             }
+            Item.OnDrop += CheckWord;
             //check slot if empty
             for (int i = 0; i < InventoryManager.ins.slots.Count; i++)
             {

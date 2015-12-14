@@ -13,19 +13,25 @@ public class TinaAndJun_Act1_Manager : MonoBehaviour {
     int sprtIndex = 0;
     [SerializeField]
     int pts = 0;
+    [SerializeField]
+    int activityPts = 0;
+
 	void Start () {
         sprts.Shuffle();
         Generate();
+      
 	}
 
     void Generate() {
-        for(int i=0; i<4; i++)
+        Item.OnDrop += IncPts;
+        Item.OnInsert += Insert;
+        for (int i=0; i<4; i++)
         {
             GameObject o = (GameObject)Instantiate(item, new Vector3(0,0,0), Quaternion.identity);
             Reparent(o.transform);
             InventoryManager.ins.items.Add(o);
         }
-       
+        InventoryManager.ins.InitSlotEvents();
         ChangeSprite();
         SetItemsID();
     }
@@ -54,14 +60,17 @@ public class TinaAndJun_Act1_Manager : MonoBehaviour {
 
     void ChangeSprite()
     {
-        
-        for (int i = 0; i< InventoryManager.ins.items.Count; i++)
+        if (sprtIndex < sprts.Length - 1)
         {
-            Image img = null;
-            img = InventoryManager.ins.items[i].GetComponent<Image>();
-            img.sprite = sprts[sprtIndex];
-            sprtIndex++;
+            for (int i = 0; i < InventoryManager.ins.items.Count; i++)
+            {
+                Image img = null;
+                img = InventoryManager.ins.items[i].GetComponent<Image>();
+                img.sprite = sprts[sprtIndex];
+                sprtIndex++;
+            }
         }
+        
     }
 
     void SetItemsID()
@@ -73,17 +82,52 @@ public class TinaAndJun_Act1_Manager : MonoBehaviour {
             string s = InventoryManager.ins.items[i].GetComponent<Image>().sprite.name.ToUpper();
             if (s.Contains("EE") || s.Contains("EA"))
             {
-                itm.eColor = EID.red;
+                itm.eColor = EColor.red;
             }
             else if (s.Contains("OO"))
             {
-                itm.eColor = EID.green;
+                itm.eColor = EColor.green;
             }
         }
     }
 
+    void DestroyItems(){
+        Item.OnDrop -= IncPts;
+        for(int i=0; i<InventoryManager.ins.items.Count; i++)
+        {
+            Destroy(InventoryManager.ins.items[i]);
+        }
+        //for(int i=0; i<InventoryManager.ins.slots.Count; i++)
+        //{
+        //    InventoryManager.ins.slots[i].GetComponent<Slot>().CheckSlot();
+        //}
+        InventoryManager.ins.items.Clear();
+    }
+
+    void Insert(Transform slot, Transform item)
+    {
+        print(slot.name);
+        Slot s = slot.GetComponent<Slot>();
+       
+       Destroy(item.gameObject);
+        s.empty = true;
+    }
+
+    IEnumerator IENext()
+    {
+        DestroyItems();
+        yield return new WaitForSeconds(1f);
+       
+        Generate();
+    }
     void IncPts()
     {
         pts++;
+        if (pts == 4)
+        {
+            activityPts++;
+            pts = 0;
+            StartCoroutine(IENext());
+        }
     }
 }
