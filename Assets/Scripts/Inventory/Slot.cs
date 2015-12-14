@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Slot : MonoBehaviour {
 
-    public EID eColor = new EID();
+    public EColor eColor = new EColor();
     public bool empty = true;
 	void Start () {
         //InventoryManager.ins.slots.Add(this.gameObject);
@@ -16,21 +16,23 @@ public class Slot : MonoBehaviour {
         for (int i = 0; i < InventoryManager.ins.items.Count; i++)
         {
             itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.OnDrop += CheckSlot;
+            //itm.OnDrop += CheckSlot;
 
         }
+        Item.OnDrop += CheckSlot;
         CheckSlot();
     }
 
     public void RemoveEvent()
     {
-        Item itm = null;
+        //Item itm = null;
 
-        for (int i = 0; i < InventoryManager.ins.items.Count; i++)
-        {
-            itm = InventoryManager.ins.items[i].GetComponent<Item>();
-            itm.OnDrop -= CheckSlot;
-        }
+        //for (int i = 0; i < InventoryManager.ins.items.Count; i++)
+        //{
+        //    itm = InventoryManager.ins.items[i].GetComponent<Item>();
+        //    //itm.OnDrop -= CheckSlot;
+        //}
+        Item.OnDrop -= CheckSlot;
     }
 
     public void CheckSlot()

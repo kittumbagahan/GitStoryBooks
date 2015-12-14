@@ -4,14 +4,25 @@ using UnityEngine.UI;
 using System.Text;
 public static class MonoExtension{
 
-
+    static string strAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static string RandomLetter()
     {
-        string str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        return str[UnityEngine.Random.Range(0, str.Length)].ToString();
+        
+        return strAlphabet[UnityEngine.Random.Range(0, strAlphabet.Length)].ToString();
     }
 
+    public static string RandomLetter(string str) {
+        //RETURNS RANDOM LETTER THAT DOES NOT EXIST IN STR
+        string tempStr = strAlphabet;
+        for(int i=0; i<str.Length; i++)
+        {
+            tempStr = tempStr.Replace(str[i].ToString(),"");
+        }
+    
+        Debug.Log(tempStr.Length);
+        return tempStr[UnityEngine.Random.Range(0, tempStr.Length)].ToString();
+    }
     //
 
     public static void SetXPos(this Transform t, float newX)

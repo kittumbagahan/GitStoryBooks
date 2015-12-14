@@ -141,6 +141,7 @@ public class WordGameManager : MonoBehaviour {
 
 	public void CheckWord()
 	{
+        print("check");
 		string str="";
 		for(int i=0; i<groupClue.transform.childCount; i++)
 		{
@@ -191,13 +192,14 @@ public class WordGameManager : MonoBehaviour {
 		//DisableItems(lstPoolClueLetters, false);
 
 		for(int i=0; i<InventoryManager.ins.slots.Count; i++){
-			//InventoryManager.ins.slots[i].SetActive(false);
-			Destroy(InventoryManager.ins.slots[i]);
+            //InventoryManager.ins.slots[i].SetActive(false);
+            InventoryManager.ins.slots[i].GetComponent<Slot>().RemoveEvent();
+            Destroy(InventoryManager.ins.slots[i]);
 		}
 		//remove items from the slot
 		for(int i=0; i<InventoryManager.ins.items.Count; i++){
 			Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-			itm.OnDrop -= CheckWord;
+			//itm.OnDrop -= CheckWord;
 			Destroy(InventoryManager.ins.items[i]);
 			/*
 			Transform t = null;
@@ -206,7 +208,8 @@ public class WordGameManager : MonoBehaviour {
 			t.gameObject.SetActive(false);
 			*/
 		}
-		
+        Item.OnDrop -= CheckWord;
+        
 		//remove slots from the container
 		/*
 		for(int i=0; i<InventoryManager.ins.slots.Count; i++){
@@ -279,14 +282,16 @@ public class WordGameManager : MonoBehaviour {
 				}
 			}
 			ChangeTextsValueTo(lstPoolClueLetters, strClue);
-			ChangeTextsValueTo(lstPoolMissingLetter, strExtracted + MonoExtension.RandomLetter());
+            lstPoolMissingLetter.Shuffle();
+			ChangeTextsValueTo(lstPoolMissingLetter, strExtracted + MonoExtension.RandomLetter(word));
 			DisableItems(lstPoolClueLetters, true);
 			//Add Checkword method on Item delegates
 			for(int i=0; i<InventoryManager.ins.items.Count; i++)
 			{
 				Item itm = InventoryManager.ins.items[i].GetComponent<Item>();
-				itm.OnDrop += CheckWord;
+				//itm.OnDrop += CheckWord;
 			}
+            Item.OnDrop += CheckWord;
             //for(int i=0; i<InventoryManager.ins.slots.Count; i++)
             //{
             //    Slot s = InventoryManager.ins.slots[i].GetComponent<Slot>();
@@ -319,6 +324,7 @@ public class WordGameManager : MonoBehaviour {
 		wordList.Shuffle();
         //GenerateWord();
         StartCoroutine(IEGoNext());
+        //print(MonoExtension.RandomLetter("BCDERFGHIJKLMNOPQRSTUVWXY"));
 	}
 	
 	
